@@ -9,6 +9,7 @@
   imports = [
     ../common
     ../common/amd.nix
+    ./audio.nix
   ];
 
   config = {
