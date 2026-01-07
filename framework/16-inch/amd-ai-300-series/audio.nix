@@ -8,7 +8,7 @@ let
   # Pull the upstream UCM tree at commit 59bb3c8c (contains the headphone/mic guards)
   # without rebuilding pkgs.alsa-ucm-conf or the wider system.
   ucm2Upstream = pkgs.fetchzip {
-    url = "https://github.com/perexg/alsa-ucm-conf/archive/59bb3c8cd016db8f6630c1774884bfb175bb9595.tar.gz";
+    url = "https://github.com/alsa-project/alsa-ucm-conf/archive/e9720b098ff5289e9bdd9ebd34a87870f0b87be6.tar.gz";
     hash = "sha256-tV/oEi9NiGXRU0gQMV6CBJhkryCSYIheAbGOIg0v0nQ=";
     stripRoot = true;
   };
