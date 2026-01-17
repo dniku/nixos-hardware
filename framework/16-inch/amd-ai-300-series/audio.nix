@@ -5,16 +5,16 @@
   ...
 }:
 let
-  # Pull the upstream UCM tree at commit e9720b09 (contains the headphone/mic guards)
+  # Pull the upstream UCM tree at release v1.2.15.3 (contains the headphone/mic guards)
   # without rebuilding pkgs.alsa-ucm-conf or the wider system.
   ucm2Upstream = pkgs.fetchzip {
-    url = "https://github.com/alsa-project/alsa-ucm-conf/archive/e9720b098ff5289e9bdd9ebd34a87870f0b87be6.tar.gz";
-    hash = "sha256-Gub+iREkwkeIwnqz1VM39rACqbFeDNk6b4prD7+Z7AU=";
+    url = "https://github.com/alsa-project/alsa-ucm-conf/archive/refs/tags/v1.2.15.3.tar.gz";
+    hash = "sha256-Vds79ITUSZOqg4yf/dnYu2muxrvJuYBpvrtde/7+m9Y=";
     stripRoot = true;
   };
 
   ucm2Patched =
-    pkgs.runCommand "alsa-ucm2-fw16-ai300-59bb3c8c" { }
+    pkgs.runCommand "alsa-ucm2-fw16-ai300-v1.2.15.3" { }
       ''
         set -euo pipefail
         mkdir -p "$out/share/alsa"
